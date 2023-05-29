@@ -1,4 +1,4 @@
-package model;
+package com.fatec.model;
 
 public class Endereco {
 
@@ -8,11 +8,12 @@ public class Endereco {
 	private int numero;
 	private String rua;
 	private String complemento;
+	private String estado;
 
-	public Endereco(Long id, String cidade, String cep, int numero, String rua, String complemento) {
-		this.id = id;
+	public Endereco(String cidade, String cep, String estado, int numero, String rua, String complemento) {
 		this.cidade = cidade;
 		this.cep = cep;
+		this.estado = estado;
 		this.numero = numero;
 		this.rua = rua;
 		this.complemento = complemento;
@@ -64,6 +65,14 @@ public class Endereco {
 
 	public void setComplemento(String complemento) {
 		this.complemento = complemento;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
 	}
 
 }

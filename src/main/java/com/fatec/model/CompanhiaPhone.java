@@ -1,4 +1,4 @@
-package model;
+package com.fatec.model;
 
 public class CompanhiaPhone extends Phone{
 	
