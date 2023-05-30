@@ -6,16 +6,30 @@ public class Endereco {
 	private String cidade;
 	private String cep;
 	private int numero;
-	private String rua;
+	private String logradouro;
 	private String complemento;
 	private String estado;
 
-	public Endereco(String cidade, String cep, String estado, int numero, String rua, String complemento) {
+	public Endereco() {
+		super();
+	}
+	
+	public Endereco(Long id, String cidade, String cep, String estado, int numero, String logradouro, String complemento) {
+		this.id = id;
 		this.cidade = cidade;
 		this.cep = cep;
 		this.estado = estado;
 		this.numero = numero;
-		this.rua = rua;
+		this.logradouro = logradouro;
+		this.complemento = complemento;
+	}
+	
+	public Endereco(String cidade, String cep, String estado, int numero, String logradouro, String complemento) {
+		this.cidade = cidade;
+		this.cep = cep;
+		this.estado = estado;
+		this.numero = numero;
+		this.logradouro = logradouro;
 		this.complemento = complemento;
 	}
 
@@ -51,12 +65,12 @@ public class Endereco {
 		this.numero = numero;
 	}
 
-	public String getRua() {
-		return rua;
+	public String getLogradouro() {
+		return logradouro;
 	}
 
-	public void setRua(String rua) {
-		this.rua = rua;
+	public void setLogradouro(String logradouro) {
+		this.logradouro = logradouro;
 	}
 
 	public String getComplemento() {
@@ -73,6 +87,12 @@ public class Endereco {
 
 	public void setEstado(String estado) {
 		this.estado = estado;
+	}
+
+	@Override
+	public String toString() {
+		return "Endereco [id=" + id + ", cidade=" + cidade + ", cep=" + cep + ", numero=" + numero + ", logradouro=" + logradouro
+				+ ", complemento=" + complemento + ", estado=" + estado + "]";
 	}
 
 }
